@@ -5,11 +5,17 @@ face_cascade = cv.CascadeClassifier('haarcascade_frontalface_default.xml')
 eye_cascade = cv.CascadeClassifier('haarcascade_eye.xml')
 
 img = cv.imread('image.jpg')
-#img = cv.imread('image2.jpg')
-#img = cv.imread('image3.jpg')
+#img = cv.imread('CasinoRoyale.jpg')
+#img = cv.imread('Quantum_of_Solace.jpg')
+#img = cv.imread('SkyFall.jpg')
+#img = cv.imread('Spectre.jpg')
 
 gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
-faces = face_cascade.detectMultiScale(gray, 1.3, 5) #default setting
+faces = face_cascade.detectMultiScale(gray, 1.3, 5) # default setting
+#faces = face_cascade.detectMultiScale(gray, 1.8, 5) # Casino Royale
+#faces = face_cascade.detectMultiScale(gray, 1.3, 5) # Quantum of Solace
+#faces = face_cascade.detectMultiScale(gray, 1.3, 5) # Skyfall
+#faces = face_cascade.detectMultiScale(gray, 1.3, 5) # Spectre
 print(len(faces))
 
 for (x, y, w, h) in faces:
