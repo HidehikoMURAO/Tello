@@ -19,7 +19,7 @@ while True:
         eyes = eye_cascade.detectMultiScale(eye_gray)
         for (ex, ey, ew, eh) in eyes:
             cv.rectangle(eye_color, (ex, ey), (ex+ew, ey+eh), (0, 255, 0), 2)
-            
+
     cv.imshow('frame', frame)
     if cv.waitKey(1) & 0xFF == ord('q'):
         break
